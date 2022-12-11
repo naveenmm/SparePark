@@ -3,6 +3,7 @@
     package="com.example.sparepark" >
 
     <application
+        android:name=".SpareParkApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
