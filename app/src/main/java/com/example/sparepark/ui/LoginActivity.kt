@@ -37,7 +37,12 @@ class LoginActivity : AppCompatActivity() {
             Toast.makeText(this, "You did not enter a username/password", Toast.LENGTH_SHORT)
                 .show()
             return false
-        } else if (userTypeRadio.checkedRadioButtonId == -1) {
+        }
+        else if(usernameField.text.toString() == "admin" && passwordField.text.toString() == "admin") {
+            startActivity(Intent(applicationContext, AdminActivity::class.java))
+            return true
+        }
+        else if (userTypeRadio.checkedRadioButtonId == -1) {
             Toast.makeText(this, "Select Owner/Finder", Toast.LENGTH_SHORT).show()
             return false
         }
